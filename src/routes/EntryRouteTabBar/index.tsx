@@ -1,4 +1,4 @@
-import { useMemo, type FC } from "react";
+import { type FC } from "react";
 import { TabBar } from "antd-mobile";
 import {
   useNavigate,
@@ -17,20 +17,20 @@ import { MyInfo } from "../MyInfo";
 import { ReplyList } from "../ReplyList";
 import { HelperCenter } from "../HelperCenter";
 import { Todo } from "../Todo";
-import { useAuthStore } from "../../store";
+// import { useAuthStore } from "../../store";
 
 export const EntryRouteTabBar: FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { pathname } = location;
-  const { authData } = useAuthStore();
-  const isAuth = useMemo(() => {
-    if (!authData.sToken) return false
-    return true
-  }, [authData])
-  if (!isAuth) {
-    navigate("/login");
-  }
+  // const { authData } = useAuthStore();
+  // const isAuth = useMemo(() => {
+  //   if (!authData.sToken) return false
+  //   return true
+  // }, [authData])
+  // if (!isAuth) {
+  //   navigate("/login");
+  // }
 
   const tabs = [
     {

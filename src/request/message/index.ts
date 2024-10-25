@@ -1,8 +1,6 @@
 import { request_48 } from "../../utils/net";
 
-export interface CommonOption {
-  token: string;
-}
+import { CommonOption } from "../common";
 
 
 
