@@ -17,20 +17,18 @@ import { MyInfo } from "../MyInfo";
 import { ReplyList } from "../ReplyList";
 import { HelperCenter } from "../HelperCenter";
 import { Todo } from "../Todo";
-// import { useAuthStore } from "../../store";
+
 
 export const EntryRouteTabBar: FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { pathname } = location;
-  // const { authData } = useAuthStore();
-  // const isAuth = useMemo(() => {
-  //   if (!authData.sToken) return false
-  //   return true
-  // }, [authData])
-  // if (!isAuth) {
-  //   navigate("/login");
-  // }
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-expect-error
+  const isAuth = window?.__pToken
+  if (!isAuth) {
+    navigate("/login");
+  }
 
   const tabs = [
     {

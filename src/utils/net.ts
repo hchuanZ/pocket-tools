@@ -8,7 +8,7 @@ const instance = axios.create({
 instance.interceptors.request.use(
     function (config) {
       // 定义需要排除的路径
-      const excludedPaths = ['/login', '/register'];
+      const excludedPaths = ['/login', '/register', '/add_token'];
   
       // 检查请求路径是否在排除列表中
       if (!excludedPaths.includes(config?.url || '')) {
