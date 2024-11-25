@@ -24,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/api', usersRouter);
 
 // 在所有其他路由处理之后添加
 app.get('*', (req, res) => {

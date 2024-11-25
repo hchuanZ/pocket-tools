@@ -9,16 +9,16 @@ instance.interceptors.request.use(
     function (config) {
       // 定义需要排除的路径
       const excludedPaths = ['/login', '/register', '/add_token'];
-  
+      console.log("config: ", config)
       // 检查请求路径是否在排除列表中
       if (!excludedPaths.includes(config?.url || '')) {
         const token = localStorage.getItem('token');
-  
+        
         if (token) {
         //   config.headers.Authorization = `Bearer ${token}`;
-        } else {
-          window.location.href = '/login';
-          return Promise.reject(new Error('No token, redirecting to login.'));
+        // } else {
+        //   window.location.href = '/login';
+        //   return Promise.reject(new Error('No token, redirecting to login.'));
         }
       }
   

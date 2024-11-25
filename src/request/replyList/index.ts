@@ -19,7 +19,7 @@ interface GetReplyBaseInfoProps extends CommonOption {
     memberId: string;
 }
 export const getReplyBaseInfo = async (option: GetReplyBaseInfoProps) => {
-    const url = 'https://pocketapi.48.cn/idolanswer/api/idolanswer/v2/custom/index'
+    const url = 'http://47.109.52.152:8848/hapi/idolanswer/api/idolanswer/v2/custom/index'
     return await request_48({
         url,
         token: option?.token,
@@ -37,7 +37,7 @@ interface GetReplyBaseInfoProps extends CommonOption {
     limit: number
 }
 export const getReplyList = async (option: GetReplyBaseInfoProps) => {
-    const url = 'https://pocketapi.48.cn/idolanswer/api/idolanswer/v1/user/question/list'
+    const url = 'http://47.109.52.152:8848/hapi/idolanswer/api/idolanswer/v1/user/question/list'
     return await request_48({
         url,
         token: option?.token,
@@ -56,7 +56,7 @@ interface SendIdolAnswerProps extends CommonOption {
     answerType: AnswerType
 }
 export const sendIdolAnswer = async (option: SendIdolAnswerProps) => {
-    const url = 'https://pocketapi.48.cn/idolanswer/api/idolanswer/v1/user/question/list'
+    const url = 'http://47.109.52.152:8848/hapi/idolanswer/api/idolanswer/v1/user/question/list'
     return await request_48({
         url,
         token: option?.token,
@@ -72,7 +72,7 @@ interface QuitIdolAnswer extends CommonOption {
     questionId: string
 }
 export const quitIdolAnswer = async (option: QuitIdolAnswer) => {
-    const url = 'https://pocketapi.48.cn/idolanswer/api/idolanswer/v1/user/question/operate'
+    const url = 'http://47.109.52.152:8848/hapi/idolanswer/api/idolanswer/v1/user/question/operate'
     return await request_48({
         url,
         token: option?.token,

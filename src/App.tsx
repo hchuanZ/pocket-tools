@@ -1,8 +1,9 @@
 // import { useState } from 'react'
-import { EntryRouteTabBar } from './routes/EntryRouteTabBar'
-import { Login } from './routes/Login'
-import './App.less'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { EntryRouteTabBar } from "./routes/EntryRouteTabBar";
+import { Login } from "./routes/Login";
+import "./App.less";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { RequireAuth } from "./components/common/RouterGuard";
 // import { useAuthStore } from './store'
 // import { useEffect } from 'react'
 
@@ -15,15 +16,21 @@ function App() {
   // }
   return (
     <Router>
-        <div style={{height: '100vh', width: '100%'}}>
-          <Routes>
-            <Route path='/login' element={<Login />}></Route>
-            <Route path="/*" element={<EntryRouteTabBar />} />
-          </Routes>
-        </div>
+      <div style={{ height: "100vh", width: "100%" }}>
+        <Routes>
+          <Route path="/login" element={<Login />}></Route>
+          <Route
+            path="/*"
+            element={
+              <RequireAuth>
+                <EntryRouteTabBar />
+              </RequireAuth>
+            }
+          />
+        </Routes>
+      </div>
     </Router>
-  )
+  );
 }
 
-
-export default App
+export default App;

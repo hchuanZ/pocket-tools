@@ -1,3 +1,3 @@
 export interface CommonOption {
-    token: string;
+    token?: string;
   }

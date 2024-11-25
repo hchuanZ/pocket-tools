@@ -48,3 +48,6 @@ export default tseslint.config({
   },
 })
 ```
+
+server是服务
+其中app,js是后端服务，transfer.js 是转发接口（处理跨域）

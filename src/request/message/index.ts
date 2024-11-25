@@ -11,7 +11,7 @@ interface GetMessageListProps extends CommonOption {
 }
 export const getMessageList = async (option: GetMessageListProps) => {
   const { lastTime } = option;
-  const url = "https://pocketapi.48.cn/message/api/v1/user/message/list";
+  const url = "http://47.109.52.152:8848/hapi/message/api/v1/user/message/list";
   return await request_48({
     url,
     token: option?.token,
@@ -28,7 +28,7 @@ interface GetRoomMsgListProps extends CommonOption {
     nextTime: string
 }
 export const getRoomMsgList = async (option: GetRoomMsgListProps) => {
-    const url = 'https://pocketapi.48.cn/im/api/v1/team/message/list/all'
+    const url = 'http://47.109.52.152:8848/hapi/im/api/v1/team/message/list/all'
     return await request_48({
         url, 
         token: option?.token,

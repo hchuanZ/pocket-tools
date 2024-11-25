@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
-    "build:dev": "tsc -b && vite build && rm -rf server/public && cp -rf dist/. server/public",
+    "build:prod": "tsc -b && vite build",
+    "build": "tsc -b && vite build && rm -rf server/public && cp -rf dist/. server/public",
     "lint": "eslint .",
     "preview": "vite preview"
   },
