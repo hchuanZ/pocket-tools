@@ -10,5 +10,8 @@ export default defineConfig({
         javascriptEnable: true
       }
     }
+  },
+  build: {
+    sourcemap: true
   }
 })

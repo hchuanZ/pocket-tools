@@ -93,6 +93,6 @@
       xhr.send(jsonData);
     });
   };
-  const res = await sendPostRequestAsync(fingerprintUrl, { fingerprint: window.__fingerprint })
-  if (res?.data?.token) window.__pToken = res?.data?.token
+  // const res = await sendPostRequestAsync(fingerprintUrl, { fingerprint: window.__fingerprint })
+  // if (res?.data?.token) window.__pToken = res?.data?.token
 })();

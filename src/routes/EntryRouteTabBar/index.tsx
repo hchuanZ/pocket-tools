@@ -73,7 +73,7 @@ export const EntryRouteTabBar: FC = () => {
         </Routes>
       </div>
       <div style={{ flex: 0 }}>
-        {location.pathname !== "/login" && (
+        {!["/login"].includes(location.pathname)  && (
           <TabBar activeKey={pathname} onChange={(value) => navigate(value)}>
             {tabs.map((item) => (
               <TabBar.Item key={item.key} icon={item.icon} title={item.title} />
