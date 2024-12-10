@@ -4,7 +4,7 @@ import { token } from "../testToken.ts";
 
 // 获取队伍list
 export const getTeamRoomList = async(option: CommonOption) => {
-    const url = 'http://47.109.52.152:8848/hapi/im/api/v1/im/team/tab/list'
+    const url = 'http://localhost:8848/hapi/im/api/v1/im/team/tab/list'
     return await request_48({
         url, 
         token: option?.token || token,
@@ -15,7 +15,7 @@ export const getTeamRoomList = async(option: CommonOption) => {
 
 // 根据队伍，获取成员list
 export const getMemberListByTeam = async (option: CommonOption & {tabId: string}) => {
-    const url = 'http://47.109.52.152:8848/hapi/im/api/v1/im/team/server/list'
+    const url = 'http://localhost:8848/hapi/im/api/v1/im/team/server/list'
     return await request_48({
         url, 
         token: option?.token || token,
